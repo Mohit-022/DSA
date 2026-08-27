@@ -13,8 +13,7 @@ public:
         this->left=NULL;
         this->right=NULL;
     }
-
-    
+ 
 };
 
 void PreOrder_display(tree *root){
