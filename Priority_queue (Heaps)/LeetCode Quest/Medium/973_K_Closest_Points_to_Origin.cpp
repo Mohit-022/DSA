@@ -1,13 +1,13 @@
 class Solution {
 public:
-    typedef pair<long long, vector<int> >piv; // pair of int & vector
+    typedef pair<int, vector<int> >piv; // pair of int & vector
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
         priority_queue< piv >pq;
         for(int i=0; i<points.size();i++){
             int x=points[i][0];
             int y=points[i][1];
-            long long dis= x*x + y*y;
-            pq.push({dis*dis,points[i]});
+            int dis= x*x + y*y;
+            pq.push({dis,points[i]});
             if(pq.size()>k) pq.pop();
         }
         vector<vector<int>> ans;
